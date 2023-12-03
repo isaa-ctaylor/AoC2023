@@ -13,14 +13,14 @@ for lindex, l in enumerate(lines):
     for s in syms:
         pos = (s.start(), lindex)
         symbols.append(pos)
-    
+
 for s in symbols:
     for pos in [(1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1), (0, -1), (1, -1)]:
         if lines[(y := s[1] + pos[1])][(x := s[0] + pos[0])].isdigit():
             while lines[y][x].isdigit():
                 x -= 1
-            nums.append((y, x+1))
-            
+            nums.append((y, x + 1))
+
 total = 0
 
 for n in set(nums):
@@ -32,7 +32,7 @@ for n in set(nums):
             y += 1
     except IndexError:
         pass
-        
+
     total += int(num)
-    
+
 print(total)

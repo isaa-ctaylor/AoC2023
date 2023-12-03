@@ -14,15 +14,15 @@ for lindex, l in enumerate(lines):
         gears.append(pos)
 
 total = 0
-    
+
 for s in gears:
     nums = []
     for pos in [(1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1), (0, -1), (1, -1)]:
         if lines[(y := s[1] + pos[1])][(x := s[0] + pos[0])].isdigit():
             while lines[y][x].isdigit():
                 x -= 1
-            nums.append((y, x+1))
-            
+            nums.append((y, x + 1))
+
     if len((nums := set(nums))) == 2:
         ratio = 1
         for index, n in enumerate(nums):
@@ -34,10 +34,9 @@ for s in gears:
                     y += 1
             except IndexError:
                 pass
-            
+
             ratio *= int(num)
 
         total += ratio
 
-    
 print(total)
