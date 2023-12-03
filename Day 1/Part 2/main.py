@@ -1,7 +1,7 @@
 import regex as re
+import aoc_helper as aoc
 
-with open("input.txt", "r") as f:
-    d = f.read()
+d = aoc.get_input(2023, 1)
 
 numd = {"zero": "0", "one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9"}
 

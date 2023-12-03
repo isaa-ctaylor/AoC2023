@@ -1,5 +1,6 @@
-with open("input.txt", "r") as f:
-    d = f.read()
+import aoc_helper as aoc
+
+d = aoc.get_input(2023, 1)
     
 total = 0
     
